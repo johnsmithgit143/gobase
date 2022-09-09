@@ -6,6 +6,6 @@ import (
 )
 
 func Sysfatal(program string, err error) {
-	fmt.Fprintf("%s: %s", program, err.Error())
+	fmt.Fprintf(os.Stderr, "%s: %s", program, err.Error())
 	os.Exit(1)
 }
