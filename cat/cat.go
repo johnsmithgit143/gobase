@@ -4,12 +4,10 @@ import (
 	"fmt"
 	"os"
 	"io"
+	"github.com/johnsmithgit143/gobase/include"
 )
 
-func sysfatal(err error) {
-	fmt.Fprintln(os.Stderr, "cat:", err)
-	os.Exit(1)
-}
+const program string = "cat"
 
 func main() {
 	var (
@@ -24,13 +22,13 @@ func main() {
 	} else {
 		for i = 1; i < argc; i++ {
 			if f, err = os.Open(os.Args[i]); err != nil {
-				sysfatal(err)
+				include.Sysfatal(program, err)
 			}
 			if _, err = io.Copy(os.Stdout, f); err != nil {
-				sysfatal(err)
+				include.Sysfatal(program, err)
 			}
 			if err = f.Close(); err != nil {
-				sysfatal(err)
+				include.Sysfatal(program, err)
 			}
 		}
 	}
