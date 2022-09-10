@@ -20,8 +20,8 @@ func Parse(validflags []string) (map[string]int, error) {
 		if !strings.HasPrefix(os.Args[i], "-") {
 			continue
 		}
-		for x = 0; x < len(Validflags); x++ {
-			if os.Args[i] == Validflags[x] {
+		for x = 0; x < len(validflags); x++ {
+			if os.Args[i] == validflags[x] {
 				flags[os.Args[i]] = i
 				continue START
 			}
