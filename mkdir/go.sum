@@ -1,4 +1,6 @@
 github.com/johnsmithgit143/gobase/flag v0.0.0-20220910022831-c590a6f2f614 h1:nzUkdNjom/QyzatQepJyFLBdPB8mMjA9wtDcErEz3nk=
 github.com/johnsmithgit143/gobase/flag v0.0.0-20220910022831-c590a6f2f614/go.mod h1:F7w63PTclEWD8OtXt+Oy6gtcFpDNtEd2I5sDGz6nX2U=
+github.com/johnsmithgit143/gobase/flag v0.0.0-20220910023847-7e401a0215c5 h1:5brAhrKvac6xDEi09DVa05X87eibadTl/NjcJKjX2mU=
+github.com/johnsmithgit143/gobase/flag v0.0.0-20220910023847-7e401a0215c5/go.mod h1:F7w63PTclEWD8OtXt+Oy6gtcFpDNtEd2I5sDGz6nX2U=
 github.com/johnsmithgit143/gobase/include v0.0.0-20220910022831-c590a6f2f614 h1:3Fo33dGX/ePFdW9OObKQA/rslXoRQluVt4VviO496A8=
 github.com/johnsmithgit143/gobase/include v0.0.0-20220910022831-c590a6f2f614/go.mod h1:BNf4S7gdKCwRbSthV8G3ncQ5/S9vPqW8TDP7xuvLvfQ=

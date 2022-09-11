@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-func Parse(validflags []string) (map[string]int, error) {
+func Parse(validFlags []string) (map[string]int, error) {
 	var (
 		flags = make(map[string]int)
 		i int
@@ -20,8 +20,8 @@ func Parse(validflags []string) (map[string]int, error) {
 		if !strings.HasPrefix(os.Args[i], "-") {
 			continue
 		}
-		for x = 0; x < len(validflags); x++ {
-			if os.Args[i] == validflags[x] {
+		for x = 0; x < len(validFlags); x++ {
+			if os.Args[i] == validFlags[x] {
 				flags[os.Args[i]] = i
 				continue START
 			}
