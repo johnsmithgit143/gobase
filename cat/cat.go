@@ -16,20 +16,23 @@ func main() {
 		i int
 		err error
 	)
+	
 	if argc == 1 {
 		fmt.Fprintln(os.Stderr, "usage: cat [files...]")
 		os.Exit(1)
-	} else {
-		for i = 1; i < argc; i++ {
-			if f, err = os.Open(os.Args[i]); err != nil {
-				include.Sysfatal(program, err)
-			}
-			if _, err = io.Copy(os.Stdout, f); err != nil {
-				include.Sysfatal(program, err)
-			}
-			if err = f.Close(); err != nil {
-				include.Sysfatal(program, err)
-			}
+	}
+	
+	for i = 1; i < argc; i++ {
+		if f, err = os.Open(os.Args[i]); err != nil {
+			include.Sysfatal(program, err)
+		}
+		
+		if _, err = io.Copy(os.Stdout, f); err != nil {
+			include.Sysfatal(program, err)
+		}
+		
+		if err = f.Close(); err != nil {
+			include.Sysfatal(program, err)
 		}
 	}
 }
